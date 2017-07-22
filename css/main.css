@@ -1,2 +1,15 @@
 @import "joqd.min.css";
 @import "gorbeh.min.css";
+
+
+main{
+  position: fixed;
+  box-shadow: 0 0 8rem rgba(0,0,0,0.10), 0 0 3rem rgba(0,0,0,0.15)
+}
+
+@media screen and (min-width:1200px){
+  main{
+    right: 20vw; top: 15vh;
+    width: 60vw; height: 70vh;
+  }
+}
