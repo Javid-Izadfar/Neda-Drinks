@@ -1,15 +1,30 @@
 @import "joqd.min.css";
 @import "gorbeh.min.css";
 
+.spacial-bg{
+  position: absolute;
+  top: 0; right: 0;
+  height: 100%; width: 100%;
+  border-radius: inherit;
+  overflow: hidden}
+.spacial-bg::before{
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  background: linear-gradient(145deg, #FDD835 0%, #FFEB3B 100%);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%)}
+
+.row{position: relative}
 
 main{
   position: fixed;
-  box-shadow: 0 0 8rem rgba(0,0,0,0.10), 0 0 3rem rgba(0,0,0,0.15)
-}
+  box-shadow: 0 0 8rem rgba(0,0,0,0.10), 0 0 3rem rgba(0,0,0,0.18)}
 
 @media screen and (min-width:1200px){
+  body > .spacial-bg::before{width: 38%}
   main{
-    right: 20vw; top: 15vh;
-    width: 60vw; height: 70vh;
-  }
+    right: 20vw; top: 14vh;
+    width: 60vw; height: 72vh}
+  main > .spacial-bg::before{width: 42%}
 }
